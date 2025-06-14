@@ -1,0 +1,107 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --blue-primary: #005b96;
+  --blue-light: #0288d1;
+  --blue-lighter: #03a9f4;
+  --gray-light: #f5f7fa;
+  --white: #ffffff;
+  --text-dark: #1c2331;
+  --text-light: #606f7b;
+  --shadow: rgba(0, 0, 0, 0.12);
+}
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--gray-light);
+  color: var(--text-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--blue-primary);
+  margin-bottom: 48px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1080px;
+  width: 100%;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 6px 12px var(--shadow);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 24px 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 91, 150, 0.3);
+  outline: none;
+}
+
+.motoboy-name {
+  font-weight: 600;
+  font-size: 1.50rem;
+  margin-bottom: 16px;
+  color: var(--blue-primary);
+  text-align: center;
+}
+
+.neighborhood-name {
+  margin-top: 16px;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-weight: 500;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
