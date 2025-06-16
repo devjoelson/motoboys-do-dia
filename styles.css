@@ -105,3 +105,15 @@ main {
   }
 }
 
+.carousel-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  transition: transform 0.6s ease;
+}
+
+
